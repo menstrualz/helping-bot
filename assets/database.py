@@ -22,7 +22,6 @@ class Database:
         result = await db_pool.execute_query(query, (channel_id,))
         return result[0][0] if result else None
 
-
     async def get_channel_id(self, member):
         query = "SELECT channel_id FROM `tickets` WHERE member = %s"
         result = await db_pool.execute_query(query, (member,))
