@@ -5,12 +5,7 @@ from dotenv import load_dotenv
 from disnake.ext import commands
 from loguru import logger
 
-bot = commands.Bot(command_prefix = "!",
-                   intents = disnake.Intents.all(),
-                   help_command = None,
-                   command_sync_flags = commands.CommandSyncFlags.all(),
-                   reload = True,
-                   )
+bot = commands.Bot(command_prefix = "!", intents = disnake.Intents.all(), help_command = None, reload = True)
 
 @bot.event
 async def on_ready():
